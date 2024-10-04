@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation bar with Login and Dark Mode toggle -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>CodeEditor</h1>
+        </div>
+        <div class="nav-right">
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-toggle">
+                <label for="dark-toggle">Dark Mode</label>
+            </div>
+            <div class="login">
+                <button id="loginBtn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search section -->
+    <section class="search-section">
+        <input type="text" id="searchBar" placeholder="Search Programming Languages...">
+    </section>
+
+    <!-- Programming language cards -->
+    <section class="language-cards">
+        <div class="card" data-category="frontend">
+            <img src="assets/img/html.png" alt="HTML">
+            <h2><a href="htmlh.html">HTML</a></h2>
+        </div>
+        <div class="card" data-category="frontend">
+            <img src="assets/img/css.png" alt="CSS">
+            <h2><a href="htmlh.html">CSS</a></h2>
+        </div>
+        <div class="card" data-category="frontend">
+            <img src="assets/img/javascript.png" alt="JavaScript">
+            <h2>JavaScript</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>React</h2>
+        </div>
+
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>Python</h2>
+        </div>
+
+        <div class="card" data-category="backend">
+            <img src="assets/img/nodejs.png" alt="Node.js">
+            <h2>Node.js</h2>
+        </div>
+        <div class="card" data-category="app-development">
+            <img src="assets/img/flutter.png" alt="Flutter">
+            <h2>Flutter</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>PHP</h2></div>
+            <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>Java</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>Typescript</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>Scala</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>React</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>VHDL</h2>
+        </div>
+        <div class="card" data-category="frontend backend">
+            <img src="assets/img/react.png" alt="React">
+            <h2>Swift</h2>
+        <!-- </div> -->
+        <!-- <div class="card" data-category="frontend backend"> -->
+            <!-- <img src="assets/img/react.png" alt="React"> -->
+            <!-- <h2>Dylan</h2> -->
+        <!-- </div> -->
+        <!-- <div class="card" data-category="frontend backend"> -->
+            <!-- <img src="assets/img/react.png" alt="React"> -->
+            <!-- <h2></h2> -->
+        <!-- </div> -->
+
+        </div>
+
+
+        <!-- Add more languages similarly -->
+    </section>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/monaco-editor@0.20.0/min/vs/loader.js"></script>
+<script>
+    require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.20.0/min/vs' }});
+    require(['vs/editor/editor.main'], function() {
+        monaco.editor.create(document.getElementById('container'), {
+            value: [
+                '<!-- HTML Starter Template -->',
+                '<!DOCTYPE html>',
+                '<html lang="en">',
+                '<head>',
+                '    <meta charset="UTF-8">',
+                '    <meta name="viewport" content="width=device-width, initial-scale=1.0">',
+                '    <title>HTML Starter</title>',
+                '</head>',
+                '<body>',
+                '    <h1>Hello World</h1>',
+                '</body>',
+                '</html>'
+            ].join('\n'),
+            language: 'html'
+        });
+    });
+</script>
+
+</body>
+</html>
